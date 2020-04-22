@@ -1,0 +1,36 @@
+{% extends 'vote_app/base.html' %}
+
+{% block title %}
+<title>Result</title>
+{% endblock %}
+
+
+{% block content %}
+   
+<div class="row mt-3">
+        <div class="col-md-6 offset-md-3">
+            <div class="card text-center">
+                <div class="card-header">
+                   Polls Result (Total votes = {{ result.total }})
+                </div>
+                
+                <div class="card-body">
+                  <h4 class="card-title">{{ result.question_text }}</h4>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item "><b>{{ result.option_one_text }}</b> ----- {{ result.in_percent_one  }}%    ({{ result.option_one_count }} votes)</li>
+                    <li class="list-group-item"><b>{{ result.option_two_text }}</b>  ------ {{ result.in_percent_two  }}% ({{ result.option_two_count }} votes) </li>
+                    <li class="list-group-item"><b>{{ result.option_three_text }}</b> ------{{ result.in_percent_three  }}% ({{ result.option_three_count }} votes)</li>
+                  </ul>
+                
+                </div>
+                
+                
+              </div>
+
+
+ 
+            
+        </div>
+  </div>
+
+{% endblock %}

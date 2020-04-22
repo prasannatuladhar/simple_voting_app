@@ -1,0 +1,34 @@
+{% extends 'vote_app/base.html' %}
+
+{% block title %}
+<title>Simple Voting System</title>
+{% endblock %}
+
+
+{% block content %}
+   
+<div class="row mt-3">
+        <div class="col-md-6 offset-md-3">
+            <div class="card text-center">
+                <div class="card-header">
+                  Available Polls
+                </div>
+                {% for v in vote %}
+                <div class="card-body border-bottom">
+                  <h5 class="card-title">{{ v.question_text }}</h5>
+                  <span>
+                    <a href="{% url 'vote' v.id %}" class="btn btn-primary">Vote</a> 
+                    <a href="{% url 'result' v.id %}" class="btn btn-outline-primary">View Result</a> 
+                  </span>  
+                </div>
+                {% endfor %}
+                
+              </div>
+
+
+ 
+            
+        </div>
+  </div>
+
+{% endblock %}
