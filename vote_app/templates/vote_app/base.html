@@ -28,7 +28,7 @@
                
                 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Create Poll</a>
+                  <a class="nav-link" href="{% url 'create' %}">Create Poll</a>
                 </li>
                
               </ul>
@@ -36,7 +36,10 @@
           </nav>
         {% block content %}
         {% endblock %}
-
+        <div class="mt-2 text-center ">
+          <a href="https://twitter.com/pr_tuladhar"><img src="{% static 'twitter.png' %}" class="img_footer"> </a>
+          <a href="https://github.com/prasannatuladhar/simple_voting_app"><img src="{% static 'git.png' %}" class="img_footer"> </a>
+         </div>
       </div>
     
 

@@ -1,7 +1,7 @@
-# from django import forms
-# from .models import Vote
+from django.forms import ModelForm
+from .models import Vote
 
-# class VoteForm(forms.ModelForm):
-#     class Meta:
-#         model = Vote
-#         fields = ['option_one_count','option_two_count','option_three_count']
+class VoteForm(ModelForm):
+    class Meta:
+        model = Vote
+        fields = ['question_text','option_one_text','option_two_text','option_three_text','option_one_image_url','option_two_image_url','option_three_image_url']

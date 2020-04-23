@@ -19,22 +19,22 @@
                   <h5 class="card-title">{{ vote.question_text }}</h5>
                   <div class="row">
                     <div class="col-sm">
-                    <img src="https://english.khabarhub.com/wp-content/uploads/2019/08/Rabi_Lamichhane-.jpg" height="200" width="200"  class="img-thumbnail">
+                    <img src="{{ vote.option_one_image_url }}" height="200" width="200"  class="img-thumbnail">
                      <p>{{ vote.option_one_text }}</p> 
-                     <input type="radio"  name="vote" value="option_one_count">
+                     <input type="radio"  name="vote" value="option_one_count" required>
                     </div>
                     <div class="col-sm">
-                    <img src="https://english.khabarhub.com/wp-content/uploads/2019/10/PM_Oli-e1570101048679.jpg" height="200" width="200" class="img-thumbnail">
+                    <img src="{{ vote.option_two_image_url }}" height="200" width="200" class="img-thumbnail">
 
                         <p>{{ vote.option_two_text }}</p> 
-                       <input type="radio"  name="vote" value="option_two_count">
+                       <input type="radio"  name="vote" value="option_two_count" required>
                     </div>
                     <div class="col-sm">
-                    <img src="https://i.ndtvimg.com/i/2016-07/pushpa-kamal-dahal-prachanda_650x400_81468312367.jpg" height="200" width="200" class="img-thumbnail">
+                    <img src="{{ vote.option_three_image_url }}" height="200" width="200" class="img-thumbnail">
 
                         <p>{{ vote.option_three_text }}</p> 
  
-                        <input type="radio"  name="vote" value="option_three_count">
+                        <input type="radio"  name="vote" value="option_three_count" required>
                     </div>
                   </div>
                   
