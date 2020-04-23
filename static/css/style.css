@@ -1,0 +1,17 @@
+input[type=radio] {
+    width: 30px;
+    height: 30px;
+    
+}
+
+img {
+    width: auto !important; /*Keep the aspect ratio of the image*/
+    height: 140px !important;
+    margin: 0 auto 1em auto; /*Center the image*/
+ }
+
+@media only screen and (max-width: 600px) {
+    img {
+        width: 100px;
+    }
+  }
